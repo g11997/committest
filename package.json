@@ -12,7 +12,6 @@
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
     "build": "node build/build.js",
-    "precommit": "webpack  --config ./web/webpack.config.js"
   },
   "dependencies": {
     "vue": "^2.5.2",
@@ -88,8 +87,7 @@
   ],
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "npm run lint"
+      "pre-commit": "echo 'husky' && webpack  --config ./web/webpack.config.js && git add --all"
     }
   }
 }
