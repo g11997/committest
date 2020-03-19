@@ -1,4 +1,4 @@
-# commit-test
+# committest
 
 > A Vue.js project
 
